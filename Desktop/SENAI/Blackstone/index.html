@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blackstone Equestrian - Cavalos e acessórios para o universo equestre."
+    />
+    <title>Blackstone Equestrian</title>
+    <link rel="stylesheet" href="stlye.css" />
+  </head>
+
+  <body>
+    <div class="site-topo">
+      <header class="cabecalho">
+        <a href="#inicio" class="logo" aria-label="Blackstone Equestrian">
+          <img
+            src="assets/img/logobse-transparent.png"
+            alt="Blackstone Equestrian"
+            class="logo-image"
+          />
+        </a>
+
+        <div class="pesquisa">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="O que você está procurando?"
+          />
+          <button type="button" id="searchBtn" aria-label="Buscar">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="5.7"></circle>
+              <path d="M15.3 15.3 L20 20"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="acoes">
+          <button
+            type="button"
+            class="icone theme-toggle"
+            id="themeToggle"
+            title="Alternar tema"
+            aria-label="Alternar modo claro e escuro"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-icon">
+                <svg
+                  class="theme-icon-svg sun"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <path
+                    d="M12 1.8v2.4M12 19.8v2.4M4.93 4.93l1.7 1.7M17.37 17.37l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.93 19.07l1.7-1.7M17.37 6.63l1.7-1.7"
+                  ></path>
+                </svg>
+                <svg
+                  class="theme-icon-svg moon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.5 14.2A7.2 7.2 0 0 1 9.8 5.5a7.3 7.3 0 1 0 8.7 8.7Z"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <a
+            href="#conta"
+            class="icone"
+            title="Minha conta"
+            aria-label="Minha conta"
+          >
+            <svg class="header-icon" viewBox="0 0 32 32" aria-hidden="true">
+              <circle cx="16" cy="9" r="5.5"></circle>
+              <path d="M6.5 27c.6-5.2 4.1-8 9.5-8s8.9 2.8 9.5 8"></path>
+            </svg>
+          </a>
+
+          <a
+            href="#compra"
+            class="icone carrinho"
+            title="Carrinho"
+            aria-label="Carrinho"
+          >
+            <svg class="header-icon" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M5 9h3l2.2 14h13.6l2.2-10H9"></path>
+              <path d="M12 9h12"></path>
+              <circle cx="13" cy="27" r="1.5"></circle>
+              <circle cx="23" cy="27" r="1.5"></circle>
+            </svg>
+            <span id="cartCount">0</span>
+          </a>
+        </div>
+      </header>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#cavalos">Cavalos</a>
+        <a href="#cabrestos">Cabrestos</a>
+        <a href="#lacos">Laços</a>
+        <a href="#peiteiras">Peiteiras</a>
+        <a href="#sela">Sela</a>
+        <a href="#compra">Compra</a>
+        <a href="#conta">Criar conta</a>
+      </nav>
+    </div>
+
+    <main>
+      <section id="inicio" class="pagina">
+        <div class="banner-slider" aria-label="Banner promocional">
+          <div class="banner-slide active">
+            <div class="banner-conteudo">
+              <span class="subtitulo">QUALIDADE E TRADIÇÃO</span>
+
+              <h1>
+                Para você
+                <br />
+                <em>e seu cavalo</em>
+              </h1>
+
+              <p>
+                Encontre cavalos selecionados e acessórios para acompanhar cada
+                momento da sua jornada equestre.
+              </p>
+
+              <a href="#cavalos" class="botao botao-claro">VER CAVALOS →</a>
+            </div>
+          </div>
+
+          <div class="banner-slide">
+            <div class="banner-conteudo">
+              <span class="subtitulo">O MELHOR PARA O SEU CAVALO</span>
+
+              <h1>
+                Estilo,
+                <br />
+                <em>conforto e tradição</em>
+              </h1>
+
+              <p>
+                Acesse produtos pensados para desempenho, segurança e cuidado no
+                dia a dia da equitação.
+              </p>
+
+              <a href="#cabrestos" class="botao botao-claro"
+                >VER ACESSÓRIOS →</a
+              >
+            </div>
+          </div>
+
+          <div class="banner-slide">
+            <div class="banner-conteudo">
+              <span class="subtitulo">SELEÇÃO BLACKSTONE</span>
+
+              <h1>
+                Para você
+                <br />
+                <em>e seu cavalo</em>
+              </h1>
+
+              <p>
+                Descubra itens de alta qualidade para uma rotina mais elegante,
+                segura e completa.
+              </p>
+
+              <a href="#sela" class="botao botao-claro">VER SELEÇÃO →</a>
+            </div>
+          </div>
+
+          <div class="banner-dots" aria-label="Navegação do banner">
+            <button
+              class="banner-dot active"
+              type="button"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              class="banner-dot"
+              type="button"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              class="banner-dot"
+              type="button"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+        </div>
+
+        <div class="conteudo">
+          <div class="titulo-secao">
+            <span>EXPLORE</span>
+            <h2>Nossas categorias</h2>
+          </div>
+
+          <div class="categorias">
+            <a href="#cavalos" class="categoria">
+              <div class="categoria-icone">🐎</div>
+              <h3>Cavalos</h3>
+              <p>Cavalos selecionados</p>
+            </a>
+
+            <a href="#cabrestos" class="categoria">
+              <div class="categoria-icone">♞</div>
+              <h3>Cabrestos</h3>
+              <p>Segurança e conforto</p>
+            </a>
+
+            <a href="#lacos" class="categoria">
+              <div class="categoria-icone">〰</div>
+              <h3>Laços</h3>
+              <p>Tradição e qualidade</p>
+            </a>
+
+            <a href="#peiteiras" class="categoria">
+              <div class="categoria-icone">◇</div>
+              <h3>Peiteiras</h3>
+              <p>Resistência e estilo</p>
+            </a>
+
+            <a href="#sela" class="categoria">
+              <div class="categoria-icone">🐴</div>
+              <h3>Sela</h3>
+              <p>Conforto e equilíbrio</p>
+            </a>
+          </div>
+
+          <div class="titulo-secao">
+            <span>SELEÇÃO BLACKSTONE</span>
+            <h2>Destaques</h2>
+          </div>
+
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem">
+                <span class="etiqueta">DESTAQUE</span>
+                <button class="favorito" type="button">♡</button>
+              </div>
+
+              <div class="produto-info">
+                <span class="categoria-produto">CABRESTOS</span>
+                <h3>Cabresto de Couro</h3>
+                <p>Couro resistente com acabamento artesanal.</p>
+                <strong class="preco">R$ 299,00</strong>
+                <button
+                  type="button"
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto de Couro', 'R$ 299,00')"
+                >
+                  ADICIONAR AO CARRINHO
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem">
+                <span class="etiqueta">DESTAQUE</span>
+                <button class="favorito" type="button">♡</button>
+              </div>
+
+              <div class="produto-info">
+                <span class="categoria-produto">PEITEIRAS</span>
+                <h3>Peiteira de Couro</h3>
+                <p>Qualidade, resistência e segurança para seu cavalo.</p>
+                <strong class="preco">R$ 399,00</strong>
+                <button
+                  type="button"
+                  class="botao"
+                  onclick="adicionarCarrinho('Peiteira de Couro', 'R$ 399,00')"
+                >
+                  ADICIONAR AO CARRINHO
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem">
+                <span class="etiqueta">DESTAQUE</span>
+                <button class="favorito" type="button">♡</button>
+              </div>
+
+              <div class="produto-info">
+                <span class="categoria-produto">SELAS</span>
+                <h3>Sela Americana</h3>
+                <p>Conforto, firmeza e tradição.</p>
+                <strong class="preco">R$ 4.790,00</strong>
+                <button
+                  type="button"
+                  class="botao"
+                  onclick="adicionarCarrinho('Sela Americana', 'R$ 4.790,00')"
+                >
+                  ADICIONAR AO CARRINHO
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <section class="diferenciais">
+          <div class="diferenciais-titulo">
+            <span>POR QUE BLACKSTONE?</span>
+            <h2>
+              Mais do que produtos.
+              <br />
+              <em>É a nossa essência.</em>
+            </h2>
+          </div>
+
+          <div class="diferenciais-grid">
+            <div class="diferencial">
+              <div class="diferencial-icone">♢</div>
+              <h3>CONFIANÇA</h3>
+              <p>Segurança e transparência em cada compra.</p>
+            </div>
+
+            <div class="diferencial">
+              <div class="diferencial-icone">☆</div>
+              <h3>EXCELÊNCIA</h3>
+              <p>Qualidade em cada detalhe dos nossos produtos.</p>
+            </div>
+
+            <div class="diferencial">
+              <div class="diferencial-icone">♞</div>
+              <h3>TRADIÇÃO</h3>
+              <p>Respeito pela cultura e pelo universo equestre.</p>
+            </div>
+
+            <div class="diferencial">
+              <div class="diferencial-icone">ϟ</div>
+              <h3>FORÇA</h3>
+              <p>Produtos preparados para acompanhar sua jornada.</p>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="cavalos" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>NOSSA SELEÇÃO</span>
+          <h1>Cavalos</h1>
+          <p>Cavalos selecionados para diferentes estilos e necessidades.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <span class="categoria-produto">QUARTO DE MILHA</span>
+                <h3>Quarto de Milha</h3>
+                <p>Excelente linhagem e ótimo desempenho.</p>
+                <strong class="preco">R$ 45.000,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Quarto de Milha', 'R$ 45.000,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <span class="categoria-produto">MANGALARGA</span>
+                <h3>Mangalarga Marchador</h3>
+                <p>Elegância, resistência e tradição.</p>
+                <strong class="preco">R$ 32.000,00</strong>
+                <button
+                  class="botao"
+                  onclick="
+                    adicionarCarrinho('Mangalarga Marchador', 'R$ 32.000,00')
+                  "
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <span class="categoria-produto">CRIOULO</span>
+                <h3>Crioulo</h3>
+                <p>Força, docilidade e adaptação.</p>
+                <strong class="preco">R$ 28.000,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Crioulo', 'R$ 28.000,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="cabrestos" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>ACESSÓRIOS</span>
+          <h1>Cabrestos</h1>
+          <p>Segurança, conforto e controle.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto de Couro</h3>
+                <p>Couro resistente e acabamento artesanal.</p>
+                <strong class="preco">R$ 299,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto de Couro', 'R$ 299,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto de Nylon</h3>
+                <p>Leve, resistente e confortável.</p>
+                <strong class="preco">R$ 149,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto de Nylon', 'R$ 149,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto Soft</h3>
+                <p>Conforto para o uso diário.</p>
+                <strong class="preco">R$ 219,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto Soft', 'R$ 219,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="lacos" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>ACESSÓRIOS</span>
+          <h1>Laços</h1>
+          <p>Tradição e qualidade em cada detalhe.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Laço de Seda</h3>
+                <p>Trançado tradicional e acabamento refinado.</p>
+                <strong class="preco">R$ 149,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Laço de Seda', 'R$ 149,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Laço de Corda</h3>
+                <p>Resistente para treino e manejo.</p>
+                <strong class="preco">R$ 119,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Laço de Corda', 'R$ 119,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Laço de Competição</h3>
+                <p>Precisão e desempenho para provas.</p>
+                <strong class="preco">R$ 189,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Laço de Competição', 'R$ 189,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="peiteiras" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>ACESSÓRIOS</span>
+          <h1>Peiteiras</h1>
+          <p>Proteção, conforto e desempenho.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Peiteira de Couro</h3>
+                <p>Couro firme e acabamento artesanal.</p>
+                <strong class="preco">R$ 399,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Peiteira de Couro', 'R$ 399,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Peiteira de Nylon</h3>
+                <p>Resistente e leve.</p>
+                <strong class="preco">R$ 259,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Peiteira de Nylon', 'R$ 259,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Peiteira Ajustável</h3>
+                <p>Regulagem prática e segura.</p>
+                <strong class="preco">R$ 279,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Peiteira Ajustável', 'R$ 279,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="sela" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>EQUIPAMENTOS</span>
+          <h1>Selas</h1>
+          <p>Conforto, equilíbrio e performance.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Sela Americana</h3>
+                <p>Conforto, firmeza e tradição.</p>
+                <strong class="preco">R$ 4.790,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Sela Americana', 'R$ 4.790,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Sela Tambor</h3>
+                <p>Leveza e estabilidade para velocidade.</p>
+                <strong class="preco">R$ 3.990,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Sela Tambor', 'R$ 3.990,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Sela de Passeio</h3>
+                <p>Conforto para longas cavalgadas.</p>
+                <strong class="preco">R$ 2.390,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Sela de Passeio', 'R$ 2.390,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="compra" class="pagina">
+        <div class="cabecalho-pagina">
+          <span>SEU PEDIDO</span>
+          <h1>Finalizar compra</h1>
+          <p>Confira seus produtos e seus dados.</p>
+        </div>
+
+        <div class="checkout">
+          <div class="formulario">
+            <h2>Dados de entrega</h2>
+
+            <label for="nomeCompra">Nome completo</label>
+            <input type="text" id="nomeCompra" placeholder="Digite seu nome" />
+
+            <label for="emailCompra">E-mail</label>
+            <input type="email" id="emailCompra" placeholder="voce@email.com" />
+
+            <label for="telefoneCompra">Telefone</label>
+            <input
+              type="tel"
+              id="telefoneCompra"
+              placeholder="(00) 00000-0000"
+            />
+
+            <label for="enderecoCompra">Endereço</label>
+            <input
+              type="text"
+              id="enderecoCompra"
+              placeholder="Rua, número e complemento"
+            />
+
+            <label for="cidadeCompra">Cidade</label>
+            <input type="text" id="cidadeCompra" placeholder="Sua cidade" />
+
+            <label for="cepCompra">CEP</label>
+            <input type="text" id="cepCompra" placeholder="00000-000" />
+
+            <h2>Pagamento</h2>
+
+            <label for="pagamento">Forma de pagamento</label>
+            <select id="pagamento">
+              <option value="cartao">Cartão de crédito</option>
+              <option value="pix">PIX</option>
+              <option value="boleto">Boleto</option>
+            </select>
+          </div>
+
+          <div class="resumo">
+            <h2>Resumo do pedido</h2>
+            <div id="resumoCarrinho">
+              <p>Seu carrinho está vazio.</p>
+            </div>
+
+            <div class="total">
+              <span>Total</span>
+              <strong id="totalCompra">R$ 0,00</strong>
+            </div>
+
+            <button type="button" class="botao" onclick="finalizarCompra()">
+              FINALIZAR COMPRA
+            </button>
+
+            <button
+              type="button"
+              class="botao botao-secundario"
+              onclick="limparCarrinho()"
+            >
+              LIMPAR CARRINHO
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section id="conta" class="pagina">
+        <div class="cabecalho-pagina">
+          <span>BLACKSTONE EQUESTRIAN</span>
+          <h1>Criar conta</h1>
+          <p>Crie sua conta para acompanhar seus pedidos.</p>
+        </div>
+
+        <div class="conta-container">
+          <div class="formulario">
+            <h2>Seus dados</h2>
+
+            <label for="nomeConta">Nome completo *</label>
+            <input type="text" id="nomeConta" placeholder="Digite seu nome" />
+
+            <label for="emailConta">E-mail *</label>
+            <input
+              type="email"
+              id="emailConta"
+              placeholder="Digite seu e-mail"
+            />
+
+            <label for="telefoneConta">Telefone</label>
+            <input
+              type="tel"
+              id="telefoneConta"
+              placeholder="(00) 00000-0000"
+            />
+
+            <label for="senhaConta">Senha *</label>
+            <input
+              type="password"
+              id="senhaConta"
+              placeholder="Crie uma senha"
+            />
+
+            <label for="confirmarSenha">Confirmar senha *</label>
+            <input
+              type="password"
+              id="confirmarSenha"
+              placeholder="Digite a senha novamente"
+            />
+
+            <div class="checkbox">
+              <input type="checkbox" id="termos" />
+              <label for="termos">Aceito os termos de uso.</label>
+            </div>
+
+            <button type="button" class="botao" onclick="criarConta()">
+              CRIAR CONTA
+            </button>
+          </div>
+
+          <div class="conta-info">
+            <span>BEM-VINDO À BLACKSTONE</span>
+            <h2>
+              Faça parte da nossa
+              <em>jornada equestre.</em>
+            </h2>
+            <p>
+              Tenha acesso aos seus pedidos, favoritos e novidades da
+              Blackstone.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <div class="rodape-colunas">
+          <div class="rodape-coluna">
+            <h2>Sobre nós</h2>
+            <a href="#conta">Quem somos?</a>
+            <a href="#inicio">Onde nos encontrar</a>
+          </div>
+
+          <div class="rodape-coluna">
+            <h2>Precisa de ajuda?</h2>
+            <a href="#conta">Central de ajuda</a>
+            <a href="#conta">Política de privacidade</a>
+            <a href="#conta">Termo de uso</a>
+          </div>
+        </div>
+
+        <div class="rodape-logo-wrap" aria-label="Blackstone Equestrian">
+          <img
+            src="assets/img/logobse-transparent.png"
+            alt="Blackstone Equestrian"
+            class="rodape-logo"
+          />
+        </div>
+      </div>
+
+      <small class="rodape-copy"
+        >© 2026 Blackstone Equestrian. Todos os direitos reservados.</small
+      >
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
