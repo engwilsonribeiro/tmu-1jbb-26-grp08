@@ -443,7 +443,7 @@ body.dark-theme .theme-icon-svg.moon {
 ===================================================== */
 
 .pagina {
-    display: none;
+    display: block;
     width: 100%;
     min-height: 500px;
 }
