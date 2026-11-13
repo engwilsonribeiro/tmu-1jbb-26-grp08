@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Blackstone Equestrian - Cavalos e acessórios para o universo equestre."
+    />
+    <title>Blackstone Equestrian - Cabrestos</title>
+    <link rel="stylesheet" href="./assets/css/cabresto.css" />
+  </head>
+
+  <body>
+    <div class="site-topo">
+      <header class="cabecalho">
+        <a href="#inicio" class="logo" aria-label="Blackstone Equestrian">
+          <img
+            src="assets/img/logobse-transparent.png"
+            alt="Blackstone Equestrian"
+            class="logo-image"
+          />
+        </a>
+
+        <div class="pesquisa">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="O que você está procurando?"
+          />
+          <button type="button" id="searchBtn" aria-label="Buscar">
+            <svg class="search-icon" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="10.5" cy="10.5" r="5.7"></circle>
+              <path d="M15.3 15.3 L20 20"></path>
+            </svg>
+          </button>
+        </div>
+
+        <div class="acoes">
+          <button
+            type="button"
+            class="icone theme-toggle"
+            id="themeToggle"
+            title="Alternar tema"
+            aria-label="Alternar modo claro e escuro"
+            aria-pressed="false"
+          >
+            <span class="theme-toggle-track" aria-hidden="true">
+              <span class="theme-toggle-icon">
+                <svg
+                  class="theme-icon-svg sun"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="4.2"></circle>
+                  <path
+                    d="M12 1.8v2.4M12 19.8v2.4M4.93 4.93l1.7 1.7M17.37 17.37l1.7 1.7M1.8 12h2.4M19.8 12h2.4M4.93 19.07l1.7-1.7M17.37 6.63l1.7-1.7"
+                  ></path>
+                </svg>
+                <svg
+                  class="theme-icon-svg moon"
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M18.5 14.2A7.2 7.2 0 0 1 9.8 5.5a7.3 7.3 0 1 0 8.7 8.7Z"
+                  ></path>
+                </svg>
+              </span>
+            </span>
+          </button>
+
+          <a
+            href="#conta"
+            class="icone"
+            title="Minha conta"
+            aria-label="Minha conta"
+          >
+            <svg class="header-icon" viewBox="0 0 32 32" aria-hidden="true">
+              <circle cx="16" cy="9" r="5.5"></circle>
+              <path d="M6.5 27c.6-5.2 4.1-8 9.5-8s8.9 2.8 9.5 8"></path>
+            </svg>
+          </a>
+
+          <a
+            href="#compra"
+            class="icone carrinho"
+            title="Carrinho"
+            aria-label="Carrinho"
+          >
+            <svg class="header-icon" viewBox="0 0 32 32" aria-hidden="true">
+              <path d="M5 9h3l2.2 14h13.6l2.2-10H9"></path>
+              <path d="M12 9h12"></path>
+              <circle cx="13" cy="27" r="1.5"></circle>
+              <circle cx="23" cy="27" r="1.5"></circle>
+            </svg>
+            <span id="cartCount">0</span>
+          </a>
+        </div>
+      </header>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="#cavalos">Cavalos</a>
+        <a href="cabrestos.html">Cabrestos</a>
+        <a href="#lacos">Laços</a>
+        <a href="#peiteiras">Peiteiras</a>
+        <a href="#sela">Sela</a>
+        <a href="#compra">Compra</a>
+        <a href="#conta">Criar conta</a>
+      </nav>
+    </div>
+
+    <main>
+  
+
+      <section id="cabrestos" class="pagina pagina-categoria">
+        <div class="cabecalho-pagina">
+          <span>ACESSÓRIOS</span>
+          <h1>Cabrestos</h1>
+          <p>Segurança, conforto e controle.</p>
+        </div>
+
+        <div class="conteudo">
+          <div class="produtos">
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto de Couro</h3>
+                <p>Couro resistente e acabamento artesanal.</p>
+                <strong class="preco">R$ 299,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto de Couro', 'R$ 299,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto de Nylon</h3>
+                <p>Leve, resistente e confortável.</p>
+                <strong class="preco">R$ 149,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto de Nylon', 'R$ 149,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+
+            <article class="produto">
+              <div class="produto-imagem"></div>
+              <div class="produto-info">
+                <h3>Cabresto Soft</h3>
+                <p>Conforto para o uso diário.</p>
+                <strong class="preco">R$ 219,00</strong>
+                <button
+                  class="botao"
+                  onclick="adicionarCarrinho('Cabresto Soft', 'R$ 219,00')"
+                >
+                  COMPRAR
+                </button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-conteudo">
+        <div class="rodape-colunas">
+          <div class="rodape-coluna">
+            <h2>Sobre nós</h2>
+            <a href="#conta">Quem somos?</a>
+            <a href="#inicio">Onde nos encontrar</a>
+          </div>
+
+          <div class="rodape-coluna">
+            <h2>Precisa de ajuda?</h2>
+            <a href="#conta">Central de ajuda</a>
+            <a href="#conta">Política de privacidade</a>
+            <a href="#conta">Termo de uso</a>
+          </div>
+        </div>
+
+        <div class="rodape-logo-wrap" aria-label="Blackstone Equestrian">
+          <img
+            src="assets/img/logobse-transparent.png"
+            alt="Blackstone Equestrian"
+            class="rodape-logo"
+          />
+        </div>
+      </div>
+
+      <small class="rodape-copy"
+        >© 2026 Blackstone Equestrian. Todos os direitos reservados.</small
+      >
+    </footer>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
